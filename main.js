@@ -16,7 +16,7 @@ function calculate() {
         if (isNaN(num1) || isNaN(num2)) {
             result = "You need to enter a number!"
         }
-        else if (num2 === 0) {
+        else if (num2 === 0 && operator === '/') {
             result = 'You cant divide by zero you goober.'
         }
         else if( operator === "+") {
