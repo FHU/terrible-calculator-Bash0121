@@ -12,12 +12,25 @@ function calculate() {
     const num1 = parseFloat(num1Input.value)
     const num2 = parseFloat(num2Input.value)
     const operator = operatorSelect.value;
-
-    let result
-    if( operator === "+") {
-        result = num1 + num2
-    }
-    
+    let result;
+        if (isNaN(num1) || isNaN(num2)) {
+            result = "You need to enter a number!"
+        }
+        else if (num2 === 0) {
+            result = 'You cant divide by zero you goober.'
+        }
+        else if( operator === "+") {
+            result = num1 + num2
+        }
+        else if( operator === "-") {
+            result = num1 - num2
+        }
+        else if( operator === "*") {
+            result = num1 * num2
+        }
+        else if( operator === "/") {
+            result = num1 / num2
+        }
     // Step 3 - update the result span with the result of the calculation
     resultSpan.innerText = result;
 }
